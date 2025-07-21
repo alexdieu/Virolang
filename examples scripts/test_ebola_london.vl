@@ -1,0 +1,17 @@
+// test.vl - Ebola Virus Realistic Workflow for London
+
+// Step 1: Load the reference genome for Zaire ebolavirus from NCBI.
+// This is the strain responsible for the deadliest Ebola outbreaks.
+Ebola_Zaire = load_genome(id: "NC_002549.1");
+
+// Step 2: Create a large, dense urban population representing London.
+// We'll use 1,500 agents and keep verbose logging enabled.
+London = create population(name: "London", size: 1500, verbose: true);
+
+// Step 3: Calibrate the model against a severe but focused outbreak scenario.
+// Ebola's transmission dynamics often lead to intense clusters rather than
+// widespread infection. We'll target a peak of 100 infected agents.
+CalibratedLondon = London calibrate(target_peak_infected: 100);
+
+// Step 4: Unleash the calibrated Ebola virus simulation on the London population.
+EbolaOutbreakReport = Ebola_Zaire ! CalibratedLondon;

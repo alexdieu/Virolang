@@ -1,0 +1,17 @@
+// test.vl - SARS-CoV-2 Realistic Workflow for Paris
+
+// Step 1: Load the real-world virus genome for SARS-CoV-2 from NCBI.
+// NC_045512.2 is the reference sequence for the original strain.
+SARS_CoV_2 = load_genome(id: "NC_045512.2");
+
+// Step 2: Create a large, dense urban population representing Paris.
+// We'll use 1,000 agents and enable verbose logging to see detailed reports.
+Paris = create population(name: "Paris", size: 1000, verbose: true);
+
+// Step 3: Calibrate the model's transmissibility against a severe outbreak scenario.
+// Aim for a peak where ~25% of the population (250 agents) is infected,
+// reflecting the rapid spread of an airborne virus in a dense city.
+CalibratedParis = Paris calibrate(target_peak_infected: 250);
+
+// Step 4: Unleash the real, calibrated virus on the Paris population and run the full simulation.
+ParisOutbreakReport = SARS_CoV_2 ! CalibratedParis;
