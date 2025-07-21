@@ -1,0 +1,11 @@
+# Core libraries
+numpy
+scipy
+networkx
+pydantic
+
+# ANTLR runtime
+antlr4-python3-runtime==4.13.1
+
+# Testing
+pytest
