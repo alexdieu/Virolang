@@ -4,7 +4,7 @@
 
 ---
 
-![Virolang GUI in Action]()
+![Virolang GUI in Action](https://raw.githubusercontent.com/alexdieu/Virolang/refs/heads/main/Assets/GUI.png)
 
 ## About The Project
 
