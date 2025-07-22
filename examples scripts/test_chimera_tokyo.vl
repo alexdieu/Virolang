@@ -1,3 +1,5 @@
+// Custom Virus Realistic Workflow for Tokyo
+
 // Step 1: Design a new synthetic virus from a custom protein sequence.
 // This creates a hypothetical virus not found in nature.
 Chimera_Virus = design(name: "Chimera-7", protein: "MGSK*");
