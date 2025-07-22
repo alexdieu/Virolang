@@ -1,0 +1,15 @@
+// Step 1: Design a new synthetic virus from a custom protein sequence.
+// This creates a hypothetical virus not found in nature.
+Chimera_Virus = design(name: "Chimera-7", protein: "MGSK*");
+
+// Step 2: Create a very large, dense population representing a megacity like Tokyo.
+// We'll use 2000 agents to simulate a more challenging scenario.
+Tokyo = create population(name: "Tokyo", size: 2000, verbose: true);
+
+// Step 3: Calibrate the model for a highly aggressive and transmissible virus.
+// We'll aim for an explosive outbreak where the peak infected count
+// reaches 40% of the total population (800 agents).
+CalibratedTokyo = Tokyo calibrate(target_peak_infected: 800);
+
+// Step 4: Unleash the custom virus on the population and run the simulation.
+TokyoOutbreakReport = Chimera_Virus ! CalibratedTokyo;
