@@ -1,4 +1,4 @@
-// test.vl - SARS-CoV-2 Realistic Workflow for Paris
+// SARS-CoV-2 Realistic Workflow for Paris
 
 // Step 1: Load the real-world virus genome for SARS-CoV-2 from NCBI.
 // NC_045512.2 is the reference sequence for the original strain.
