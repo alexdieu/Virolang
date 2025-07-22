@@ -115,4 +115,4 @@ Control the simulator by writing simple `.vl` scripts. Here are the core command
 
 ## License
 
-**MIT LICENSE**
+**GPL-3.0 license**
